@@ -47,7 +47,7 @@ structlog.configure(
         structlog.processors.TimeStamper(fmt="iso", utc=True),
         structlog.processors.add_log_level,
         structlog.processors.format_exc_info,
-        structlog.processors.JSONRenderer(),
+        structlog.processors.JSONRenderer(indent=2),
     ]
 )
 
